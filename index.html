@@ -15,6 +15,14 @@
 
 		console.log(decorate(text));
 		console.log(text);
+
+		function decorateMore(t) {
+			var a = decorate(t);
+			return '(((' + a + ')))';
+		}
+
+		console.log(decorateMore('Courses'));
+		
 		</script>
 	</body>
 </html>
