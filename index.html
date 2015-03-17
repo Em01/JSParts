@@ -7,16 +7,14 @@
 	</head>
 	<body>
 		<script>
+		var text = 'Hello';
 
-			function converter(celsius) {
-				var f = celsius * 9/5 + 32;
-				return f;
-			}
+		function decorate(t) {
+			return '#####------'+t+'--------####';
+		}
 
-			var c = 34;
-			var f = converter(c); 
-			console.log(f);
-
+		console.log(decorate(text));
+		console.log(text);
 		</script>
 	</body>
 </html>
