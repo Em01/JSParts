@@ -7,14 +7,16 @@
 	</head>
 	<body>
 		<script>
-		var name = "ABC";
-		var lastName = 'XYZ';
 
-		var fullName = name + ' ' + lastName;
-		console.log(fullName);
+			function converter(celsius) {
+				var f = celsius * 9/5 + 32;
+				return f;
+			}
 
-		var age = 100;
-		console.log(fullName + 'age:'+age);
+			var c = 34;
+			var f = converter(c); 
+			console.log(f);
+
 		</script>
 	</body>
 </html>
