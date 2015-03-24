@@ -12,6 +12,26 @@
 		this.x = x;
 		this.y = y;
 	};
+
+	var drawCar = function (car) {
+		var carHtml = '<img src="http://nostarch.com/images/car.png">';
+
+		var carElement = $(carHtml);
+//converts to a jQuery element
+		carElement.css({
+			position: "absolute",
+			left: car.x,
+			top: car.y
+		});
+
+		$("body").append(carElement);
+	//using JQ to append the carElement to the body element of the web page
+	};
+	var tesla = new Car(20, 20);
+	var nissan = new Car(100, 200);
+
+	drawCar(tesla);
+	drawCar(nissan);
 	</script>
 </body>
 </html>
