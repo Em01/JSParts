@@ -15,7 +15,21 @@
 	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
 	<script>
-	// Game code goes here
+		var getRandomNumber = function (size) {
+			return Math.floor(Math.random() * size);
+		};
+
+		var width = 400;
+		var height = 400;
+
+		var target = {
+			x: getRandomNumber(width),
+			y: getRandomNumber(height)
+		};
+
+		$("#map").click(function (event) {
+			//Click handler code goes here
+		});
 	</script>
 
 </body>
