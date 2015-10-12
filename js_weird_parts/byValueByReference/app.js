@@ -17,3 +17,20 @@ c.greeting = 'hello'; //mutate
 
 console.log(c);
 console.log(d);
+
+//by reference (even as parameters)
+
+function changeGreeting(obj) {
+	obj.greeting = 'Hola'; //mutate
+}
+
+changeGreeting(d);
+console.log(c);
+console.log(d);
+
+// equals operator setus up new memory space (new address)
+c = { greeting: 'howdy' };
+console.log(c);
+console.log(d);
+changeGreeting(c);
+console.log(c);
