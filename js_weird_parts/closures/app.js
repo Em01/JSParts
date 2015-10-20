@@ -6,4 +6,4 @@ function greet(whattosay) {
 }
 
 var sayHi = greet('Hi');
-sayHi('Tony'); //invoking a function that returns a function
+sayHi('Tony'); 
