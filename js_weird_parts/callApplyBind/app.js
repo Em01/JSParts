@@ -27,3 +27,23 @@ logPersonName('en');
 
 logName.call(person, 'en', 'es');
 logName.appy(person, ['en', 'es']);
+
+
+
+//function borrowing
+var person2 = {
+	firstname: 'Jane',
+	lastname: 'Doe'
+}
+
+person.getFullName.apply(person2);
+
+
+//function currying
+
+function multiply(a, b) {
+	return a*b;
+}
+
+var multiplyByTwo = multiply.bind(this, 2);
+console.log(multpleByTwo(4));
