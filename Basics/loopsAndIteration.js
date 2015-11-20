@@ -53,3 +53,9 @@ for (var property in myObj) {
 }
 
 myKeys; 
+
+
+//basic loop for printing numbers from 1-10 in desc order
+for (var num = 10; num > 0; num--) {
+	console.log(num);
+}

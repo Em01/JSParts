@@ -34,3 +34,11 @@ switch (fruittype) {
 	default: 
 	console.log("Sorry");
 }
+
+//while --print all numbers from 1 to 10 in descending order
+var num = 10;
+
+while (num > 0) {
+  console.log(num);
+  num--;
+}
