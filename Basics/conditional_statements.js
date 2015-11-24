@@ -42,3 +42,13 @@ while (num > 0) {
   console.log(num);
   num--;
 }
+
+//while loop with if statement to print numbers divisible by 2 from 1-10
+num = 10;
+
+while (num > 10) {
+	if (num % 2 === 0) {
+		console.log(num);
+	}
+	num ++;
+}
