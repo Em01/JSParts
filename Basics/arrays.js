@@ -1,0 +1,48 @@
+//count even numbers and erase odd numbers
+var numberList = [2, 5, 8, 4, 7, 12, 6, 9, 3, 11];
+var evenCount = 0;
+for (var i = 0; i < numberList.length; i ++ ){
+	if (numberList[i] % 2 == 0) {
+		evenCount ++;
+	} else {
+		numberList[i] = undefined;
+	}
+}
+console.log(evenCount);
+
+//using an array and functions to keep track of train passengers
+function addPassenger(name, list) {
+	if (list.length === 0) {
+		list.push(name);
+	} else {
+		for (var i = 0; i < list.length; i++) {
+			if(list[i] == undefined){
+				list[i] = name;
+				return list;
+			} else if (i == list.length -1) {
+				list.push(name);
+				return list;
+			}
+		}
+	}
+}
+
+//new passenger list
+var passengerList = [];
+passengerList = addPassenger("Greg Pollack", passengerList);
+//delete passenger
+function deletePassenger ( name, list ) {
+	if(list.length === 0) {
+		console.log("List is empty");
+	} else {
+		for (var i = 0; i < list.length; i++) {
+			if(list[i] == name){
+				list[i] = undefined;
+				return list;
+			} else if (i === list.length - 1) {
+				console.log("Passenger not found!");
+			}
+		}
+	}
+	return list;
+}
