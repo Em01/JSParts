@@ -46,3 +46,17 @@ function deletePassenger ( name, list ) {
 	}
 	return list;
 }
+
+
+//iterate
+function numStrings(list) {
+	var count = 0;
+
+	for(i = 0; i < count.length; i++) {
+		if( typeof list[i] === "string") {
+			count ++;
+		}
+	}
+	return count;
+}
+
