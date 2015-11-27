@@ -18,3 +18,27 @@ function countE() {
 }
 
 countE();
+
+
+//IIF
+( function ( ) {
+	alert("Quick! You've got a Fast Pass to " + pass + "!");
+} )();
+
+//Treat an array of functions like a queue. Pass the result of each function into the next queue
+//until the queue is empty
+var list = [
+	function(a) { return 8 * a; },
+	function(a) { return (a - 2) * (a - 3); },
+	function(a) { return a* a; }
+];
+
+var applyAndEmpty = function(input, queue) {
+	var length = queue.length;
+	for(var i = 0; i < length; i++){
+		input = queue.shift()(input);
+	}
+	return input;
+};
+
+alert(applyAndEmpty(start, list));
