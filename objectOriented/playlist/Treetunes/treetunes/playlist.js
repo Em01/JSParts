@@ -1,7 +1,6 @@
 function Playlist() {
 	this.songs = [];
 	this.nowPlayingIndex = 0;
-
 }
 
 Playlist.prototype.add = function(song) {
@@ -29,7 +28,7 @@ Playlist.prototype.next = function() {
 
 Playlist.prototype.renderInElement = function(list) {
 	list.innerHtml = "";
-	for( var i = 0; i < this.songs.length; i++) {
-		list.innerHtml += this.songs[i].toHTML;
+	for(var i = 0; i < this.songs.length; i++) {
+		list.innerHTML += this.songs[i].toHTML();
 	}
 };

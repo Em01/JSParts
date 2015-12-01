@@ -33,18 +33,8 @@ function Owner(firstName, lastName, age) {
 
 
 
-//child.js
-function Child(firstName, lastName, owner) {
-	Parent.call(this, firstName, lastName);
-	this.owner = owner;
-}
-
-Child.prototype = Object.create(Parent.prototype);
 
 
-//parent.js
-function Parent(firstName, lastName, job) {
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.job = job;
-}
+
+
+
