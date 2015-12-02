@@ -15,3 +15,13 @@ var count = 0;
 for (var i = 1; i< 100; i++) {
 	count += bar;
 }
+
+
+
+
+function listGuns(guns) {
+  for (var speargun in guns) {
+    console.log("Behold! " + speargun + ", with " +
+                guns[speargun]["heft"] + " heft!");
+  }
+}
