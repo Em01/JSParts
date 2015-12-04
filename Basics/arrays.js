@@ -80,3 +80,13 @@ var puzzlers = [
 ];
 
 
+//return the sum of an arguments array
+ var add = function() {
+ 	var total = 0;
+ 	for(i = 0; i<arguments.length; i++) {
+ 		total += + arguments[i];
+ 	}
+ 	return total;
+ };
+
+
