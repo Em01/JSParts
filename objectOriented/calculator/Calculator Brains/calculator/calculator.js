@@ -1,7 +1,7 @@
 var calculator = {
-		sum: 0,
-		add: function(value) {
-			this.sum += value;
+    sum: 0,
+    add: function(value) {
+    		this.sum += value;
     },
     subtact: function(value) {
     	this.sum -= value;

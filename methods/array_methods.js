@@ -25,3 +25,17 @@ array.pop();
 var array = [1, 2, 3, 4];
 array.push(22);
 //returns [1, 2, 3, 4, 22];
+
+//reduce-works also on empty array
+function sum(numbers) {
+	numbers.reduce(function(pv, cv) {
+		return pv+cv;
+	}, 0);
+}
+
+
+
+
+
+
+

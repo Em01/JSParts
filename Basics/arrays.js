@@ -89,4 +89,13 @@ var puzzlers = [
  	return total;
  };
 
-
+//sum array values
+function sumArray(number) {
+	return numbers.reduce(function(a, b){
+		return a + b;
+	});
+}
+//or
+[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, currentIndex, array) {
+  return previousValue + currentValue;
+}, 10);
