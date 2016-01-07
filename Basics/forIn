@@ -1,0 +1,44 @@
+var student = {
+    name: "Dave",
+    age: 20
+};
+
+for (var key in student) {
+    console.log(key);
+}
+
+for (var propName in student) {
+    console.log(student[propName]);
+}
+
+for (prop in person) {
+    console.log(prop, ': ', person[prop]);
+}
+
+var animal = {
+    name: "bob",
+    age: 2,
+    color: brown
+}
+
+for (var prop in cat) {
+    console.log(prop, ': ', cat[prop]);
+}
+
+for (var prop in cat) {
+    console.log(prop, ': ', cat[prop]);
+};
+
+var child = {
+    name : "ted",
+    age: 3,
+    eyes: "blue"
+}
+
+for (var prop in child) {
+    console.log(prop, ': ', child[prop]);
+}
+
+for (var prop in child) {
+    console.log(prop, ': ', child[prop]);
+};
