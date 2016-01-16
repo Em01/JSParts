@@ -79,7 +79,6 @@ getSubmarineTicket("Mario");
           " today for " + obstacle + " danger.\n" +
           "Current danger zones are:\n" +
           list);
-  };
 };
 
 function assignTorpedo ( name, passengerArray ) {
@@ -98,3 +97,31 @@ function assignTorpedo ( name, passengerArray ) {
 var subPassengers = ["Luke", "Leila", "Han", "Charlie"];
 var giveAssignment = assignTorpedo("Chewie", subPassengers);
 giveAssignment();
+
+//new example
+
+function speak(greeting) {
+  return function(name) {
+    alert(speak + ' ' + name);
+  };
+}
+
+speak('Hi')('Abby');
+
+
+//additional
+function add(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+console.log(add(3)(5));
+
+
+function subtract(x) {
+  return function(y) {
+    return x - y;
+  };
+}
+
+console.log(subtract(x)(y));
