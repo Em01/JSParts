@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Lab 5-6</title> 
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function openWindow(){
+var info="";
+
+  info += "Welcome, " +  navigator.appCodeName;
+  info += " user!\nYou are using the "; 
+  info +=   navigator.appName + " browser,\nversion ";
+  info +=   navigator.appVersion + ".\nYour user agent ";
+  info += "information is " +  navigator.userAgent
+
+  alert(info);
+}
+
+//-->
+</script>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+<script type="text/javascript">
+document.write(
+"<p>The property <strong><em>navigator.userAgent</em></strong> "
+  + "returns:<br /><strong><font color='#FF0000'>" 
+  + navigator.userAgent +"</font></strong></p>"
+)
+</script>
+
+<form name="myForm">
+<input type="button" name="buttonClick" value="Click for More Browser Info" onClick="openWindow()" />
+</form>
+
+</body>
+</html>

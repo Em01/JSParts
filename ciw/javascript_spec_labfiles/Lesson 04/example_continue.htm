@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example: continue Statement</title>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+  var leapYears = 0;
+  var curYear = 2001;
+
+  while (curYear <= 2100) {
+    curYear++;
+
+if (curYear % 4) continue;
+
+    leapYears++;
+    document.write(curYear + " ");
+
+  }
+
+// -->
+</script>
+</head>
+<body>
+<h3>The number of leap years from 2001 to 2100 is:
+<script language="JavaScript" type="text/javascript">
+<!--
+
+  document.write(leapYears);
+
+// -->
+</script>
+</h3>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lab 4-6</title>
+
+<script language="JavaScript" type="text/javascript">
+function switchTest(SetOption) {
+OptionsSelect = document.frmOne.SetOption.value
+
+switch (OptionsSelect) {
+case "1":
+alert("Arizona")
+break
+case "2":
+alert("New Mexico")
+break
+case "3":
+alert("California")
+break
+default:
+alert("Cannot be determined")
+}
+}
+</script>
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<form name = "frmOne">
+
+<select name= "SetOption" onchange="switchTest(this)">
+<option value = "0">Select a U.S. City - See the State!</option>
+<option value = "1">Phoenix</option>
+<option value = "2">Roswell</option>
+<option value = "3">Sacramento</option>
+<option value = "4">My city</option>
+<option value = "5">Your city</option>
+</select>
+
+</form>
+
+
+</body>
+</html>

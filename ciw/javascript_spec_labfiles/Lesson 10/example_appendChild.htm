@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" î"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example: appendChild</title>
+
+<script type="text/javascript">
+   var appendedText = "";
+   function AnswerWrong(){
+     var txt = 'Wrong Answer!';
+     var newtext = document.createTextNode(txt);
+     var appendedText = window.document.body.appendChild(newtext);
+	}
+   function AnswerRight(){
+     var txt = 'RIGHT ANSWER!';
+     var newtext = document.createTextNode(txt);
+     var appendedText = window.document.body.appendChild(newtext);
+	    } 
+</script>
+</head>
+
+<body id="body">
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+Question:  How many little pigs had houses made of straw?<br />
+<form name="formButtons">
+<p> <button onclick="AnswerRight();this.disabled=true;" name="button1">
+1 little pig</button></p>
+ <p><button onclick="AnswerWrong();this.disabled=true;" name="button2">
+2 little pigs</button></p>
+ <p><button onclick="AnswerWrong();this.disabled=true;" name="button3">
+3 little pigs</button></p>
+<p> 
+<input type="button" value="Reload Page" onclick="window.location.reload()" /></p>
+<br />
+</form>
+</body>
+</html>

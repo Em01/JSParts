@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example: Phone Number Test</title>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+This example tests whether a telephone number includes the proper sequence of numbers.  First, it checks for three numbers followed by a (-).  Then it checks for another three numbers followed by a (-).  Finally, it checks for four numbers.  You can test this by changing the phone number in the source code (var myTeleNum). If you enter a number that does not follow proper phone number format, you will see true change to false.<br /><br />
+
+<script language="JavaScript" type="text/javascript">
+var myTeleNum = "555-123-1234";
+var myRegExp = \d{3}-?\d{3}-?\d{4}/;
+document.write(myRegExp.test(myTeleNum));
+</script>
+</body>
+</html>

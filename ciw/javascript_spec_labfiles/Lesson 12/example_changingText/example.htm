@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example: Changing text in AJAX</title>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+<script type="text/javascript">
+var http = false;
+
+if(navigator.appName == "Microsoft Internet Explorer") {
+  http = new ActiveXObject("Microsoft.XMLHTTP");
+} else {
+  http = new XMLHttpRequest();
+} 
+
+function replace() {
+  http.open("GET", "example.txt", true);
+  http.onreadystatechange=function() {
+    if(http.readyState == 4) {
+		alert(http.responseText);
+      document.getElementById('text').innerHTML = http.responseText;
+    }
+  }
+  http.send(null);
+}
+</script>
+
+<p><a href="javascript:replace()">Click here to watch the text below change with AJAX!</a></p>
+
+<div id="text">
+Here is the old text.
+</div>
+
+</body>
+</html>

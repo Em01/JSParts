@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lab 10-1</title>
+
+<script type="text/javascript">
+<!--
+function changeButton(){
+	if(document.getElementById('radiobuttonWebdev').checked === true){
+	radioButton = document.getElementById('radiobuttonWebdev').value;
+	var header = document.getElementById('radiobuttonWebDev').value.innerHTML = "Web Developer!";
+	alert("Hello " + header);
+	}
+	if(document.getElementById('radiobuttonGovernment').checked === true){
+	radioButton = document.getElementById('radiobuttonGovernment').value;
+	var header = document.getElementById('radiobuttonWebDev').value.innerHTML = "Uncle Sam!";
+	alert("Hello " + header);
+	}
+	getTest();
+}
+-->
+</script>
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<form>
+<p>Please select your favorite type of Web site:</p>
+<input id="radiobuttonWebdev" type="radio" name="group1" value="Web_Development" checked>Web Development</input><br />
+<input id="radiobuttonGovernment" type="radio" name="group1" value="Government">U.S. Government</input><br />
+<input id="a" type="radio" name="group1" value="A">A</input><br />
+<input id="b" type="radio" name="group1" value="B">B</input><br />
+<input id="c" type="radio" name="group1" value="C">C</input><br />
+
+
+<script type="text/javascript">
+<!--
+function getTest(){
+	document.write("<h3>CIW JavaScript Specialist</h3>");
+	document.write("<hr />");
+
+	if(radioButton == "Web_Development"){
+	document.write("<p>Here's a great site for Web developers:</p><a href=http://www.CIWcertified.com/>CIW Certified</a>");
+	}
+	
+	if(radioButton == "Government"){
+	document.write("<p>Here's a great site if you're interested in U.S. government:</p><a href=http://www.whitehouse.gov/>The White House</a>");
+	}
+}
+-->
+</script>
+
+<p>
+<input type="button" onclick="changeButton()" value="Click Here" />
+</p>
+</form>
+
+</body>
+</html>

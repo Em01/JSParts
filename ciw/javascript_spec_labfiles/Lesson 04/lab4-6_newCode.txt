@@ -1,0 +1,19 @@
+<script language="JavaScript" type="text/javascript">
+function switchTest(SetOption) {
+OptionsSelect = document.frmOne.SetOption.value
+
+switch (OptionsSelect) {
+case "1":
+alert("Arizona")
+break
+case "2":
+alert("New Mexico")
+break
+case "3":
+alert("California")
+break
+default:
+alert("Cannot be determined")
+}
+}
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example: Break Statement</title>
+
+<script type="text/javascript">
+<!--
+
+// Define variables 
+var orderAmount = 50;
+var state = "";
+
+// Find out the user's shipping state
+
+state = prompt("To which state will your order be shipped?","");
+
+//Add appropriate tax for state
+
+switch (state.toUpperCase()) {
+  
+  case "CA" :
+  alert("Your total is: " + (orderAmount * 1.0825));
+  break;
+
+  case "HI" :
+  alert("Your total is: " + (orderAmount * 1.04));
+  break;
+
+  //Note that the same code executes for both cases
+  case "WA" :
+  case "NV" :
+  alert("Your total is: " + (orderAmount * 1.065));
+  break;
+
+  case "AZ" :
+  alert("Your total is: " + (orderAmount * 1.05));
+  break;
+
+  case "UT" :
+  alert("Your total is: " + (orderAmount * 1.0475));
+  break;
+
+  default :
+  alert("Your total is: " + orderAmount);
+  break;
+}
+
+//-->
+</script>
+</head>
+
+<body>
+<h2>CIW JavaScript Specialist</h2>
+<hr />
+<p>
+<h3>Thank you for your order!</h3>
+</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example: getElementsByTagName</title>
+
+<script language="javascript" type="text/javascript">
+var numslides=0,currentslide=0;
+var slides = new Array();
+function StartSlideShow() {
+   imgs=document.getElementsByTagName("img");
+   for (i=0; i<imgs.length; i++) {
+      if (imgs[i].className != "slide") continue;
+      slides[numslides]=imgs[i];
+      if (numslides==0) {
+         imgs[i].style.display="block";
+      } else {
+         imgs[i].style.display="none";
+      }
+      imgs[i].onclick=NextSlide;
+      numslides++;
+   }
+}
+function NextSlide() {
+   slides[currentslide].style.display="none";
+   currentslide++;
+   if (currentslide >= numslides) currentslide = 0;
+   slides[currentslide].style.display="block";
+}
+window.onload=StartSlideShow;
+</script>
+</head>
+
+<body>
+<h1>Cool Slide Show</h1>
+<img class="slide" src="images/pic1.jpg" width="400" height="300" />
+<img class="slide" src="images/pic2.jpg" width="400" height="300" />
+<img class="slide" src="images/pic3.jpg" width="400" height="300" />
+<img class="slide" src="images/pic4.jpg" width="400" height="300" />
+<img class="slide" src="images/pic5.jpg" width="400" height="300" />
+<p>Click the image to advance the slides.</p>
+</body>
+</html>
+

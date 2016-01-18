@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ROTATOR>
+<PICTURE>
+   <FILE>1.jpg</FILE>
+   <HEIGHT>300px</HEIGHT>
+   <WIDTH>400px</WIDTH>
+   <ALT>First image - it will change when you click the Next Image link</ALT>
+</PICTURE>
+<PICTURE>
+   <FILE>2.jpg</FILE>
+   <HEIGHT>300px</HEIGHT>
+   <WIDTH>400px</WIDTH>
+   <ALT>Image #2 - it will change when you click either link</ALT>
+</PICTURE>
+<PICTURE>
+   <FILE>3.jpg</FILE>
+   <HEIGHT>300px</HEIGHT>
+   <WIDTH>400px</WIDTH>
+   <ALT>Image #3 - it will change when you click either link</ALT>
+</PICTURE>
+<PICTURE>
+   <FILE>4.jpg</FILE>
+   <HEIGHT>300px</HEIGHT>
+   <WIDTH>400px</WIDTH>
+   <ALT>Image #4 - it will change when you click either link</ALT>
+</PICTURE>
+<PICTURE>
+   <FILE>5.jpg</FILE>
+   <HEIGHT>300px</HEIGHT>
+   <WIDTH>400px</WIDTH>
+   <ALT>Last image - it will change when you click the Previous Image link</ALT>
+</PICTURE>
+</ROTATOR>

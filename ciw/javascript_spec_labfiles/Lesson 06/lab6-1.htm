@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lab 6-1</title>
+
+<script type="text/javascript">
+<!--
+
+function linksFun() {
+       var content="", linkWindow;
+	 //Add the alert() shown in Figure 6-1
+	 
+	  
+	  content += "<html><head><base target='_blank'></head><body>";
+	  content += "";
+	  
+	  //Add big() and fontcolor() methods
+        content += "CIW Sites"             ;
+	  content += "<p>\nThese are sites of interest to ";
+	  
+	  //Add italics() method
+        content += "CIW"              ; 
+        content += " candidates.</p>\n";
+        content += "<ul><li>";
+		
+	  //Add link() method
+	  // Use http://www.CIWcertified.com
+        content += "CIW"               ;
+        content += "\n</li>";
+        
+        content += "\n<li>";	
+	  //Add link() method
+	  // Use http://www.CIWciwcertified.com/CandidateLogin
+        content += "CIW Candidate Log-In"               ;
+        content += "\n</li>";        
+
+        content += "\n<li>";
+	  //Add link() method
+	  // Use http://www.ComputerPREP.com/
+        content += "ComputerPREP"         ;
+        content += "\n</li></ul></body></html>";
+
+        linkWindow=open("","Links","width=350,height=200,resizable=1");
+	
+	  with(linkWindow.document) {
+        open();
+	    write(content);
+	    close();
+        }
+    }
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+<!--Add HREF code -->
+	
+<a href=" "
+ onmouseover="status='CIW Links';return true;"
+ onmouseout="status='';return true;">
+<img src="images/ciw.jpg" width="181" width="84" border="0" /></a>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lab 10-2</title>
+   <script type="text/javascript">
+   
+    function getValues(objName)
+    { 
+		var rightanswers=0; 
+       	var txt=document.getElementsByName("txtField");
+  		if(txt[0].value == "javascript")
+    {alert("You got Question 1 right")
+    rightanswers++;
+    };
+			 
+    }
+  
+</script>
+   
+</head>
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<p>
+Which certification are you seeking?
+</p>
+<p>
+<select name="txtField" id=Text1>
+<option value="javascript">JavaScript Specialist</option>
+<option value="canoeing">Extreme Canoeing</option>
+<option value="moviemaking">Movie Production</option>
+</select>
+</p>
+<p>
+Which organization awards the certification?
+</p>
+<p>
+<select name="txtField" id=Text2>
+<option value="CIW">CIW</option>
+<option value="YMCA">YMCA</option>
+<option value="DGA">DGA</option>
+</select>
+</p>
+<p>
+What is the best grade you can score?
+</p>
+<p>
+<select name="txtField" id=Text3>
+<option value="100">100</option>
+<option value="B">B</option>
+<option value="pass">Pass</option>
+</select>
+</p>
+<p>
+<input id="Button1" type="button" value="Submit" onclick="getValues('txtField')" />
+</p>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+loadData("Data1.txt");
