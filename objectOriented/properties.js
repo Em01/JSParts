@@ -21,3 +21,29 @@ for(var propertyName in cat) {
 for(var propertyName in cat) {
   display(propertyName + ': ' + cat[propertyName]);
 }
+
+Object.defineProperty(cat, 'name', {enumerable: false});
+
+display(Object.keys(cat));
+
+display(JSON.stringify(cat));
+
+//configuarable
+
+Object.defineProperty(cat, 'name', {configuarable: false});
+
+//Getters and Setters
+
+Object.defineProperty(cat, 'fullName',
+  {
+    get: function() {
+      return this.name.first + ' ' + this.name.last;
+    },
+    set: function(value) {
+      var nameParts = value.split(' ');
+      this.name.first = nameParts[0];
+      this.name.last = nameParts[1];
+    }
+  });
+cat.fullName = 'Mog Tiger';
+display(cat.fullName);
