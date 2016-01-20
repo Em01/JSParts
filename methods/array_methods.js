@@ -10,7 +10,6 @@ var last = array[array.length -1];
 console.log(first);
 console.log(last);
 
-
 //shit-removes first element
 var array = [1, 2, 3, 4];
 array.shift();
@@ -33,7 +32,34 @@ function sum(numbers) {
 	}, 0);
 }
 
+//indexOf-returns index of a specified element
+var arr = [1, 2, 3];
+arr.indexOf();
 
+
+//filter()-returns new array of elements that pass the test
+function size(element) {
+  return element < 12;
+}
+
+[2, 20, 30].filter(size);
+
+//every()-returns true or false if every element passes a specified test
+function size(element) {
+  return element < 2;
+}
+
+[1, 12, 8].every(size);
+
+//concat-joins together two arrays
+var dogs = [1, 2, 3];
+var cats = [5, 6, 7];
+
+dogs.concat(cats);
+
+//get last element
+var arr = ['red', 'blue', 'green'];
+var last = arr[arr.length-1];
 
 
 

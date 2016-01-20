@@ -48,3 +48,14 @@ magicShoe.jewels = "ruby";
 
 Object.prototype.isPrototypeOf( shoe );
 shoe.isPrototypeOf( magicShoe);
+
+
+//
+var arr = ['red', 'blue', 'green'];
+  Object.defineProperty(Array.prototype, 'last',
+    {
+      get: function() {
+        return this[this.length-1];
+      }
+    });
+var last = arr.last;
