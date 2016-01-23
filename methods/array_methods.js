@@ -60,8 +60,3 @@ dogs.concat(cats);
 //get last element
 var arr = ['red', 'blue', 'green'];
 var last = arr[arr.length-1];
-
-
-
-
-
