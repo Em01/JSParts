@@ -64,3 +64,22 @@ console.log(value);
 var value = null && 99;
 console.log(value);
 //null
+
+if (true == 2)
+  console.log('true');
+else
+  console.log('false');
+//false
+
+if(true == 1)
+  console.log('true');
+else
+  console.log('false');
+//true
+
+if (null == undefined)
+  console.log('true');
+else
+  console.log('false');
+//true
+
