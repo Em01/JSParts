@@ -60,3 +60,63 @@ dogs.concat(cats);
 //get last element
 var arr = ['red', 'blue', 'green'];
 var last = arr[arr.length-1];
+
+var ratings = [5, 2, 4];
+console.log(ratings.valueOf());
+// [5, 2, 4];
+
+var entries = ['Planes', 'Trains', 'Automobiles'];
+console.log(entries.toString());
+//'Planes, Trains, Automobiles'
+
+var numbers = [1, 2, 3];
+numbers.join('|');
+//("1|2|3")
+
+var ratings = [1, 2, 3, 4];
+var newRatings = ratings.slice(2);
+console.log(newRatings);
+//3, 4
+
+var ratings = [1, 2, 3, 4];
+var newRatings = ratings.slice(1, 3);
+console.log(newRatings.toString());
+//'2, 3'
+
+var ratings = [1, 2, 3, 4];
+var newRatings = ratings.slice(-2);
+console.log(newRatings.toString());
+//'3, 4'
+
+
+var ratings = [1, 2, 3, 4];
+var newRatings = ratings.splice(1, 2);
+console.log(ratings.toString());
+//"1, 4"
+
+var ratings = [1, 2, 3, 4];
+ratings.splice(2, 0, 99);
+console.log(ratings.toString());
+//"1, 2, 99, 3, 4"
+
+var ratings = [1, 2, 3, 4];
+ratings.splice(2, 1, 99, 100, 101);
+console.log(ratings.toString());
+//"1, 2, 99, 100, 101, 4"
+
+var ratings = [4, 1, 3, 2];
+ratings.sort();
+console.log(ratings.toString());
+//"1, 2, 3, 4
+
+//Resolve problems with using sort
+var ratings = [4, 1, 3, 2, 10];
+ratings.sort(function (value1, value2) {
+  return value1 - value2;
+});
+console.log(ratings.toString());
+//"1, 2, 3, 4, 10"
+
+var ratings = [1, 2, 3, 4, 5];
+ratings.indexOf('3');
+// -1

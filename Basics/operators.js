@@ -83,3 +83,17 @@ else
   console.log('false');
 //true
 
+if("Beta" < "alpha")
+  console.log('true');
+else
+  console.log('false');
+//Ascii upercase come before lowercase
+
+var total = (99, 88, 44);
+console.log(total);
+//44
+
+
+var entries = new Array('Trains', 'Plains', 'Automobiles');
+console.log(entries instanceof Array);
+//true

@@ -99,3 +99,12 @@ function sumArray(number) {
 [0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, currentIndex, array) {
   return previousValue + currentValue;
 }, 10);
+
+var entries = new Array(5);
+console.log(entries.length);
+//5
+
+var entries = ['Planes', 'Trains', 'Automobiles'];
+entries[entries.length] = 'Bicycles';
+console.log(entries.length);
+//4
