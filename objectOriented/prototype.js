@@ -59,3 +59,23 @@ var arr = ['red', 'blue', 'green'];
       }
     });
 var last = arr.last;
+
+var project = {
+  securityLevel: 2
+};
+var secretProject = Object.create(project);
+console.log(secretProject.securityLevel);
+//2
+console.log(typeof secretProject.toString);
+//function
+
+/*
+- Object.create(project) sets the prototype as project for the new secret project object
+*/
+
+var project = {
+  securityLevel: 2
+};
+var secretProject = Object.create(project);
+console.log(secretProject.__proto__.__proto__ === Object.prototype);
+//true
