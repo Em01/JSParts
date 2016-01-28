@@ -47,3 +47,28 @@ Object.defineProperty(cat, 'fullName',
   });
 cat.fullName = 'Mog Tiger';
 display(cat.fullName);
+
+var task = {};
+Object.defineProperty(task, 'text', {
+  value: 'Get this done'
+});
+console.log(task.text);
+//'Get this done'
+
+var task = {};
+Object.defineProperty(task, 'text', {
+  value: 'Get this done',
+  writable: true
+});
+task.text = task.text + '....';
+console.log(task.text);
+//'Get this done ....'
+
+var task = {};
+Object.defineProperty(task, 'text', {
+  value: 'Get this done',
+  enumerable: true
+});
+for (var f in task)
+  console.log(f);
+//text
