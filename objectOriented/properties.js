@@ -72,3 +72,58 @@ Object.defineProperty(task, 'text', {
 for (var f in task)
   console.log(f);
 //text
+
+var task = {
+  _dueDate: '1/15/16'
+};
+Object.defineProperty(task, 'dueDate', {
+  get: function() {
+    return this._dueDate;
+  }
+});
+console.log(task.dueDate);
+// 1/15/16
+
+var task = {
+  _dueDate: '1/01/12'
+};
+
+Object.defineProperty(task, 'dueDate', {
+  get: function() {
+    return this._dueDate;
+  },
+  set: function(newValue) {
+    this._dueDate = newValue;
+  }
+});
+task.dueDate = '2/2/16';
+console.log(task.dueDate);
+
+var task = {};
+Object.defineProperties(task, {
+  'text': {
+    value: 'New task'
+  },
+  'dueDate' : {
+    value: '1/12/15'
+  }
+});
+console.log(task.text + ' Due: ' + task.dueDate);
+//New task Due: 1/12/15
+
+var task = { };
+Object.defineProperties(task, {
+  'text': {
+    value: 'New Task'
+  }
+});
+var descriptor = Object.getOwnPropertyDescriptor(task, 'text');
+console.log(descriptor);
+/*
+[object Object] {
+  configurable: false,
+  enumerable: false,
+  value: "New Task",
+  writable: false
+}
+*/
