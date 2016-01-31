@@ -125,3 +125,16 @@ function subtract(x) {
 }
 
 console.log(subtract(x)(y));
+
+var priceUpdate = function (cost) {
+  var currentCost = cost;
+  var generator = function() {
+    cost *= 2;
+    return currentCost;
+  };
+  return generator;
+};
+
+var updateFn = priceUpdate(50000);
+console.log(updateFn());
+//100000
