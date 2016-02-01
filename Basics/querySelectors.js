@@ -7,5 +7,17 @@
 </article>
 
 //javascript
-var element = document.getElementById('article');
+var element = document.getElementById('article1');
 console.log(element);
+
+document.getElementsByTagName('p');
+//retuns an array of the paragraphs
+
+document.getElementsByClassName('special');
+//[p.special, p.special]
+
+var a = document.getElementById('article1');
+console.log(a.childNodes);
+// [text, h4, text, p, text]
+
+
