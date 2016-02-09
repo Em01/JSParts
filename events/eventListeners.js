@@ -7,3 +7,10 @@ button.addEventListener('click', function() {
   console.log('Button Clicked');
 });
 //button clicked
+
+/*
+- onload
+- onclick
+- onmouseover
+- onfocus
+- onblur
