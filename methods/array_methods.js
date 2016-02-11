@@ -120,3 +120,22 @@ console.log(ratings.toString());
 var ratings = [1, 2, 3, 4, 5];
 ratings.indexOf('3');
 // -1
+
+var array = [1, 2, 3, 4, 9];
+array.copyWithin(0, 2, 4);
+console.log(array);
+//[3, 4, 3, 4, 9];
+
+var array = [1, 2, 3, 4, 5];
+array.fill(4);
+//[4, 4, 4, 4, 4];
+array.fill(4, 1);
+//[1, 4, 4, 4, 4];
+array.fill(4, 1, 2);
+//[1, 4, 5, 5, 5];
+
+var array = [1, 2, 3];
+array.includes(1);
+//true
+array.includes(20);
+//false
