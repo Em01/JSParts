@@ -16,16 +16,15 @@
   Create a variable named userName and assign it 
   the return value of a prompt() method.
 ***************************************************/
-
-   prompt("What is your name?", "");
+   var user = prompt("What is your name?", "");
 
 /******************************************
   Use the userName variable in alert() 
   and document.write() statements.
 ******************************************/
 
-alert("Welcome,");
-document.write("Welcome,");
+alert("Welcome," + user);
+document.write("Welcome," + user);
 
 //-->
 </script>

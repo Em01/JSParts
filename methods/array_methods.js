@@ -109,7 +109,7 @@ ratings.sort();
 console.log(ratings.toString());
 //"1, 2, 3, 4
 
-//Resolve problems with using sort
+//Resolve problems with using sort - unicode
 var ratings = [4, 1, 3, 2, 10];
 ratings.sort(function (value1, value2) {
   return value1 - value2;
@@ -139,3 +139,21 @@ array.includes(1);
 //true
 array.includes(20);
 //false
+
+//forEach()
+var dogs = [
+  {
+    breed: "Airedale",
+    age: 4
+  },
+  { breed: "Labrador",
+    age: 10
+  }
+];
+
+var results = [];
+dogs.forEach(function(dogs) {
+  if(dog.age <= 7) {
+  results.push(dog);
+  }
+});

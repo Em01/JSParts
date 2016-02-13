@@ -17,3 +17,6 @@ function submitForm(element, event) {
   console.log(event.type);
 }
 //click
+
+//<form method="post" action="//url"
+//onsubmit= "return confirmation('submit now?');">
