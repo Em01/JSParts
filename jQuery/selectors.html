@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <script type="text/javascript">
+      $(document).ready(function() {
+          var images = $('img');
+          alert("image tags: " + images.length);
+
+          var divs = $('div');
+          alert("div tags: " + divs.length);
+
+          $('div').css('background-color', 'green');
+
+          $(document).ready(function() {
+            $('div').each(function() {
+              alert($(this).html());
+          });
+        });
+
+          $(document).ready(function() {
+            alert($('#testDiv').html()); 
+          });
+      });
+    </script>
+    </head>
+  <body>
+
+    <div id="testDiv">
+      This is my test div text
+    </div>
+  <div id = "header">
+  <h1>I am a header</h1>
+  </div>
+  </body>
+</html>
