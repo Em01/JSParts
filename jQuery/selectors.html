@@ -20,16 +20,34 @@
           $(document).ready(function() {
             alert($('#testDiv').html()); 
           });
+
+          $(document).ready(function() {
+            $('.RedDiv').css('border', '2px solid red'); 
+          });
+
+          $(document).ready(function() {
+            alert($('div[title]').length); 
+          }):
+
+          $(document).ready(function() {
+            var divs = $('div[title="I am a title"]');
+            alert(divs.length);
+          });
       });
     </script>
     </head>
   <body>
-
-    <div id="testDiv">
+    <div id="testDiv" title="I am a title">
       This is my test div text
     </div>
   <div id = "header">
   <h1>I am a header</h1>
+  </div>
+  <div class="RedDiv">
+    <span>Red div</span>
+  </div>
+  <div class="BlueDiv">
+    <span>Blue div</span>
   </div>
   </body>
 </html>
