@@ -157,3 +157,60 @@ dogs.forEach(function(dogs) {
   results.push(dog);
   }
 });
+
+//map
+var array = [1, 2, 3, 4];
+
+var tobe = array.map(function(letter) {
+  return letter + "b";
+});
+
+//lastIndexOf
+var array = [1, 2, 3, 4, 10];
+array.lastIndexOf(10);
+//4
+
+//slice
+var array = [1, 2, 3, 4, 5];
+array.slice(1, 3);
+//2, 3
+
+var array = ["a", "b", "c", "d", "e"];
+array.splice(2, 0, 'abba');
+//"a", "b","abba", "c", "d", "e"
+// - from end
+removed = myFish.splice(myFish.length -3, 2);
+// myFish is ['parrot', 'anemone', 'surgeon']
+// removed is ['blue', 'trumpet']
+
+//reduce-function applied against a accumulator and each value of the array to reduce to a single value.
+//sum all array values
+var array = [0, 1, 2, 3];
+var total = array.reduce(function(a, b) {
+  return a + b;
+});
+//6
+
+var totalAgain = array.reduce(function(a, b) {
+  return a + b;
+}, 100);
+//106
+
+//flatten an array of arrays
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+  return a.concat(b);
+});
+
+//reduceRight
+
+var array = [1, 2, 3, 4];
+var total = array.reduceRight(function(a, b) {
+  return a + b;
+});
+//6
+
+var array = [[1, 2], [3, 4], [5, 6]];
+var flatten = array.reduceRight(function(a, b) {
+  return a.concat(b);
+});
+//[5, 6, 3, 4, 1, 2]
