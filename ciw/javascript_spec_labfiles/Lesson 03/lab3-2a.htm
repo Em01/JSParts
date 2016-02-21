@@ -14,8 +14,8 @@
   and uses its value in the alert() method.
 **************************************************************/
   
-  function myFunction(  ) {
-    alert("The function has been called and was passed "     );
+  function myFunction(arg1) {
+    alert("The function has been called and was passed " + arg1);
   }
 
 //-->
@@ -27,7 +27,7 @@
 <!-- A form button is used to call the function.
      Pass the value 'a string of text' as an argument to the function -->
 <form name="myForm" id="myForm">
-<input type="button" value="Call Function" onclick="myFunction( );" />
+<input type="button" value="Call Function" onclick="myFunction('a string of text');" />
 </form>
 </body>
 </html>
