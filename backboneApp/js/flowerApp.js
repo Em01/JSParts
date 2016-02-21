@@ -39,6 +39,10 @@ var flowerGroup = new app.FlowersCollection([
    redRoses, rainbowRoses 
 ]);
 
+var flowerGroupView = new app.allFlowersView({ collection: flowerGroup});
+
+$("#allFlowers").html(flowerGroupView.render().el);
+
 flowerGroup.add(heirloomRoses);
 
 flowerGroup.remove(redRoses);

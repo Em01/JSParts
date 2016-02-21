@@ -9,7 +9,7 @@ app.allFlowersView = Backbone.View.extend({
     return this;
   },
 
-  addFlower: function() {
+  addFlower: function(flower) {
     var flowerView = new app.singleFlowerView({ model: flower});
     this.$el.append(flowerView.render().el);
   }
