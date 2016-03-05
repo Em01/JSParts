@@ -10,6 +10,12 @@ var value = isFinite(42); //true
 
 var value = isNaN(NaN); //true
 
+var myString = "A string of text";
+var myNumber = 10;
+
+alert(isNaN(myString));
+alert(isNaN(myNumber));
+
 var path = "\\start\\";
 encodeURI(path); //%5Cstart%5c
 

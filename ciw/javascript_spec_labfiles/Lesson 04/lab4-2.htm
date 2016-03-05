@@ -25,9 +25,9 @@ function checkGrade(form) {
   enters a number.
 ***********************************************/
 
-
-
-
+  while(isNaN(myGrade)) {
+    myGrade = parseInt(prompt("My grade is not a number, please input a numerical value"));
+  }
 
   
   if(myGrade >= 91) {
