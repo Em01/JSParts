@@ -19,3 +19,39 @@ function addNumbers(iNum1, iNum2) {
   }
   return doAddition();
 }
+
+//
+function showName(firstName, lastName) {
+  var nameIntro = "Your name is ";
+  function makeFullName() {
+    return nameIntro + firstName + " " + lastName;
+  }
+  return makeFullName();
+}
+showName("Super", "Man");
+
+//Consider that closures have access even after the outer function returns.
+
+function showName(firstName, lastName) {
+  var nameIntro = "My name is ";
+  function makeFullName() {
+    return nameIntro + firstName + " " + lastName;
+  }
+  return makeFullName();
+}
+
+var me = showName("Emma"); //this returns the outer function
+me("Again"); //closure still has access to the outers functions and vars
+
+function numGen() {
+  var num = 1;
+
+  function checkNum(){
+    console.log(num);
+  }
+  num++;
+  return checkNum();
+}
+
+var number = numGen();
+number(); //2
