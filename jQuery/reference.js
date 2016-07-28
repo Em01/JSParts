@@ -30,3 +30,8 @@ $(".promo, #france");
 
 //first item -> last/odd/even
 $("#destinations li:first");
+
+//add or remove class
+$('.vacations').addClass('.test');
+
+$('.vacations').removeClass('.test');
