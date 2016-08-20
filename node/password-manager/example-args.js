@@ -1,4 +1,21 @@
-var argv = require('yargs').argv;
+var argv = require('yargs')
+  .command('hello', 'Greets the user', function(yargs) {
+    yargs.options({
+      name: {
+        demand: true, //argument must be provided
+        alias: 'n',
+        description: 'Your first name belongs here'
+      },
+      lastName: {
+        demand: true,
+        alias: 'l',
+        description: 'Your lastname belongs here'
+      }
+    }).help('help');
+  })
+  .help('help')
+  .argv;
+
 var command = argv._[0];
 
 console.log(argv);
