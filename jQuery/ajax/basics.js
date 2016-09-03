@@ -1,19 +1,40 @@
 //ajax method $.ajax(url[, settings])
 
-$('.confirmation').on('click', 'button', function(){
-  $.ajax('http.....', {
-    success: function(repsonse){
-      //only runs after the server has recieved a response.
-      $('.ticket').html(response).slideDown();
-    },
-    data: { "confNum": 1234}
-  //data: {"confNum": $(".ticket").data("confNum") }
-  });
+$(document).ready(function(){
+  $("#tour").on("click", "button", function(){
+    $.ajax('/photos.html', {
+      success: function(response){
+        $('.photos').html(response).fadeIn();
+      },
+      error: function(){
+        $('.photos').html('<li>Error</li>');
+      },
+      timeout: 3000,
+      beforeSend: function(){
+        $("#tour").addClass('done');
+      },
+      complete: function(){
+        $("#tour").removeClass('done');
+      }
+    })
+  })
 });
+
 
 //shorthand method-get
 //$.get(url, success)
 
 $.get('url.html', function(response){
   $('.ticket').html(response).slideDown();
+});
+
+//consider using objects as follows
+
+var confirmation = {
+  init: function(){
+  }
+}
+
+$(document).ready(function(){
+  confirmation.init();
 });
