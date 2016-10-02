@@ -38,3 +38,5 @@ var confirmation = {
 $(document).ready(function(){
   confirmation.init();
 });
+
+//detach() remove and preserve and then can appendTo();
