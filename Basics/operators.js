@@ -97,3 +97,7 @@ console.log(total);
 var entries = new Array('Trains', 'Plains', 'Automobiles');
 console.log(entries instanceof Array);
 //true
+
+
+//var msg = Math.random() > 5 : cond1 ? cond2;
+//Ternary
