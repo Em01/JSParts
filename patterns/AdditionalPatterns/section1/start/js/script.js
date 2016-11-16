@@ -25,12 +25,12 @@ var o = {
   echo: function(msg){
     this.aSaid.push("<div>" + msg + "</div>");
 
-    var aSaidLength = aSaid.length,
+    var aSaidLength = this.aSaid.length,
         start = Math.max(aSaidLength - 6,0),
         out = "";
 
     for(var i = start; i<aSaidLength; i++){
-      out += aSaid[i]; 
+      out += this.aSaid[i]; 
     }
   
     $('.advert').html(out);
