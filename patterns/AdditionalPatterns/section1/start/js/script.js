@@ -1,4 +1,9 @@
-var o = {
+var com = com || {};
+com.o2geek = com.o2geek || {};
+com.o2geek.pack = com.o2geek.pack || {};
+com.o2geek.packt.JSDP = com.o2geek.packt.JSDP || {}; 
+
+com.o2geek.packt.JSDP.sudoChat = {
   leadself: 'Me: ',
 	leadcomputer: "PC: ",
 	aSaid: ["This is a Cyber Chat"],
