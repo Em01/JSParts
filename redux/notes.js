@@ -50,4 +50,6 @@
  * It does not modify the state being given to it. 
  * It has to be pure so it has to return a new object.
  * It is called the Reducer function.
+ *
+ * export default function to export
  * */
