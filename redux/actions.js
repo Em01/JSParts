@@ -14,6 +14,10 @@
  * If the reducer doesnt care about that action it will just return the current state.
  *
  * That piece of state then gets piped into the application state containers (mapStateToProps)
+ * Passes to reducers (map dispatch to props with bindActionCreators) - takes all the actions and spits back out to all the reducers in the app.
+ * Anything returned from mapDispatchToProps will end up as props on the relevent container
  *
  * Then all the components re render
  */
+
+
