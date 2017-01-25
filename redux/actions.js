@@ -20,4 +20,14 @@
  * Then all the components re render
  */
 
+ //Actions usually have two values-a type and a payload
+ //The type describes the use of the action
+
+ export function myAction(action) {
+ 	return {
+ 		type: 'MY_ACTION',
+ 		payload: action
+ 	};
+ }
+
 

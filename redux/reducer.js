@@ -11,10 +11,10 @@ activeBook: {title: 'Another title} // Active books reducer
 */
 
 
-
-
+//A reducer is only ever called when an action occurs
+//All reducers get two arguments
 //Accepts the State and Action as arguments and returns the next state.
-
+//state is not application state only the state that this reducer is responsible for
 
 const counter = (state = 0, action) => {
   switch (action.type) {
@@ -51,3 +51,27 @@ const rootReducer = combineReducers({
 });
 
 export rootReducer;
+
+
+//if we dont care about the action then just return state
+
+export default function(state, action) {
+  return state;
+}
+
+//state = null guards against undefined
+
+export default function(state = null, action) {
+  switch(action.type) {
+    case 'BOOK_SELECTED':
+      return action.payload;
+    }
+  return state;
+}
+
+//guard against empty props if app has just started and state is null-
+render() {
+  if(!this.props.title) {
+    return <div></div>
+  }
+}
