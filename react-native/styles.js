@@ -22,7 +22,8 @@
  * center
  * end(right)
  *
- *
+ * alignSelf: stretch to fill limits of container for the element
+ * stretch
  *
  * SHADOW:
  * shadowColor: #000
@@ -30,6 +31,10 @@
  * shadowOpacity: 0.2
  *
  * ELEVATION:
+ * IMAGE: Will not show unless you specify a height and width
  *
+ * flex: 1 : expand to fill as much content as it possibly can
+ * height: 50, 
+ * width: null
  *
  */

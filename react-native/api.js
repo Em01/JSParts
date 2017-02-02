@@ -9,3 +9,6 @@
 //NativeFeedback
 //Opacity -fades on click
 //WithoutFeedback
+//
+
+//Linking-link user over to a browser
