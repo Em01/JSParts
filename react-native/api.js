@@ -46,3 +46,6 @@
 
       secureTextEntry for passwords
 */
+
+
+//SPINNER = ActivityIndicator(wrap in view tag) takes a side property large or small
