@@ -49,3 +49,8 @@
 
 
 //SPINNER = ActivityIndicator(wrap in view tag) takes a side property large or small
+
+//ListView = For Lists:
+//It watches for any scroll events by the user.
+//Watches for any item that starts to scroll out of view
+//resues the same components over and over but swaps out the data that is inside of them.
