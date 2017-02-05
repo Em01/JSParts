@@ -6,4 +6,4 @@
  * Can have as many different steps of middleware as we want.
  * 
  * */
-
+//redux thunk is an example of middleware
