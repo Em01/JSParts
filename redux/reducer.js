@@ -75,3 +75,13 @@ render() {
     return <div></div>
   }
 }
+
+//the key in combineReducers is the property of state that you are reducing:
+export default combineReducers({
+  auth: AuthReducer
+})
+//So the Auth piece of state is produced by the Auth reducer
+
+//Whatever value is returned from the reducer will end up as the applications state.
+
+//after reducer returns the new state redux compares the new and the old state. It only updates if a change has ocurred. same object in memory so we have to return something that makes redux think it has made a change.

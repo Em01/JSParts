@@ -38,3 +38,7 @@ export default function(state = [], action){
       return [ action.payload.data, ...state]
   }
 }
+
+//consider using a types.js file to export action types.
+export const EMAIL_CHANGED = 'email_changed'
+
