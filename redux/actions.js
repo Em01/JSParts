@@ -42,3 +42,7 @@ export default function(state = [], action){
 //consider using a types.js file to export action types.
 export const EMAIL_CHANGED = 'email_changed'
 
+return {
+  ...state, [action.payload.prop]: action.payload.value
+}
+//key interpolation-determined at runtime
