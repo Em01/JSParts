@@ -37,4 +37,7 @@
  * height: 50, 
  * width: null
  *
+ * overide from a common component
+    <View style={[styles.containerStyle, props.style]}>
+ * 
  */
