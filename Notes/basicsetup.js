@@ -1,0 +1,9 @@
+/*see index.html script tags can be placed in either the body or head tags or
+both.
+What this is doing is similar to the link element in css. It applied the JavaScript
+to the page so it has an effect on the HTML.
+
+When the HTML is loaded by the browser it is done so it the order that it appears
+within the broswer. If the Javascript it placed before the HTML then it may not
+work because it would be loaded before the HTML is.
+*/

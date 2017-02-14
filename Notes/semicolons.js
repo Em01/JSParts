@@ -1,0 +1,4 @@
+/* All statements in JavaScript must end with a semicolon.
+This indicates where the statement ends. If these are not included you can get
+some undexpected results. 
+*/

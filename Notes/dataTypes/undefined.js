@@ -1,0 +1,3 @@
+/*
+A variable that has not been assigned a value. 
+*/

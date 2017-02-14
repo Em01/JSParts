@@ -1,0 +1,6 @@
+/*
+var
+window
+string
+location
+*/
