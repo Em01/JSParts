@@ -15,6 +15,9 @@ Divide: 1 / 2;
 
 Assignment: Assigns a value to a variable. Remember when declaring a variable.
 var myVariable = 'Bob'
+Assignment always goes form right to left, what is on the right of the operator will
+always be resolved before the avlue is assigned to the variable on the left
+of the operator.
 
 Identity: Tests to see if two values are equal to one another and returns
 a true or false value.
@@ -32,4 +35,17 @@ Not Equal: Tests whether two values are equal to one another
 var myVariable = 3;
 myVariable !== 7;
 This would return true.
+
+Increment:
+Alows you to increment (add one to the value)
+++
+
+Decrement:
+Allows you to decrement (subtract one from the value)
+
+Remainder:
+%
+Gives the remainder of the division of two numbers.
+5 % 2 = 1
+(two goes into five twice and leaves one as the remainder)
 */
