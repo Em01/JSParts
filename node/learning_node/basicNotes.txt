@@ -1,0 +1,25 @@
+* One of JavaScripts most popular technologies
+
+* Allows you to write Server Side code with JS
+
+* Uses JavaScripts V8 engine which is at the core of node js 
+
+*V8 Engine:
+*The microprocessor is a tiny machine which gets given instructions. The set of instructions are called machine code. Microprocessors have specific languages that they are designed to speak:
+IA-32
+x86-64
+ARM
+MIPS
+Node is written in C++
+You write node in JavaScript
+V8 is written in C++
+V8 converts javascript into machine code
+Node adds on to V8 and is also written in C++
+
+* Machine code is a programming langauge whih is spoken by the computer processor
+Every program run on a computer has been compiled into machine code.
+All code eventually becoes machine code
+Machine code is very low level so instead of directly writing it(some people do) we write in languages which are compiled into machine code. 
+As time passes we have gone further away from writing low level languages into writing higher level ones (such as js).
+Machine language speaks directly to the microprocessor and is not abstracted from what is happening.
+With high level languages such as JS you are v far removed and do not directly deal with memory directly. You have an engine between you and the microprocessor that is taking care of this for you - this is the v8 engine.
