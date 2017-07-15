@@ -1,0 +1,9 @@
+* NodeJS is a server technology
+
+*Client Server Model of computing:
+
+-Client: asks for services
+-Server: Performs services
+-Both are computers, sometimes the same.
+-Client makes the request for a service(e.g some work to be performed) and the server responds woth verification that the work has been performed or error messages or data etc.
+-The request and the repsonse are both in a standard format for the server and the client to be able to understand.
