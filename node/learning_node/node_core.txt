@@ -7,3 +7,5 @@
 -Both are computers, sometimes the same.
 -Client makes the request for a service(e.g some work to be performed) and the server responds woth verification that the work has been performed or error messages or data etc.
 -The request and the repsonse are both in a standard format for the server and the client to be able to understand.
+
+A web server is a computer connected to the internet that performs services and provides responses. The usual client is the browser. The standard format for the internet is HTTP.
