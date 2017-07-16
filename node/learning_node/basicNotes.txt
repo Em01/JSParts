@@ -34,3 +34,6 @@ With high level languages such as JS you are v far removed and do not directly d
 ECMAScript: The standard that JavaScript was based on. It is needed because there are many javascript engines.
 
 Node JS is a C++ program with v8 embedded and it has added a wealth of great features that make it suitable to be a server technology.
+
+run node in terminal: node
+quit node in the terminal: ctrl c twice

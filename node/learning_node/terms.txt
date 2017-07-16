@@ -1,0 +1,1 @@
+breakpoint: spot in the code where we tell the debugging tool to pause the execution of our code.
