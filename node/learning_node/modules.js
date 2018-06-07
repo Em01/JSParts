@@ -19,4 +19,6 @@ OS: For working with the operating system.
 
 Filesystem: For working with Files and directories. Almost every operation here is wither synchronous and blocking
 or asynchronous and non-blocking.
+
+Events: EventEmitter class of functions and methods. It is defined and exposed by the events module.
 */
