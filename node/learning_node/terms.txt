@@ -1,1 +1,4 @@
-breakpoint: spot in the code where we tell the debugging tool to pause the execution of our code.
+require(): Local to each module, returns the object imported from the exported module e.g
+module.exports.logger = logger;
+
+exports is a shortcut to module.exports but cannot reset because exports is a reference to module.exports.
