@@ -1,18 +1,29 @@
 require express -> const express = require('express');
 instantiate express -> const app = express();
 
+app.listen(3000)
+
+set env vars -> const PORT = process.env.port || 3000;
+set export -> export PORT=5000
+
+
 query string parameter for additional data for backend services use ? -> localhost:3000/api/posts/2018/1?sortBy=name
 app.get('/api/posts/:year/:month', (req, res) => {
   res.send(req.query);
 });
 
-basic get request ->
+basic get request (e.g get a course)->
 
 app.get('/', (req, res) => {
   res.send('Hello world');
 });
 
-app.listen(3000)
-
-set env vars -> const PORT = process.env.port || 3000;
-set export -> export PORT=5000
+basic post request (e.g create a new course) ->
+app.port('/api/courses', (req, res) => {
+  const course = {
+    id: courses.id + 1,
+    name: req.body.name //this requires middleware e.g app.use(express.json())
+  }
+  courses.push(course);
+  res.send(course);
+})
