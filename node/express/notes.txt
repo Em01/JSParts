@@ -19,11 +19,20 @@ app.get('/', (req, res) => {
 });
 
 basic post request (e.g create a new course) ->
-app.port('/api/courses', (req, res) => {
+app.post('/api/courses', (req, res) => {
   const course = {
     id: courses.id + 1,
     name: req.body.name //this requires middleware e.g app.use(express.json())
   }
   courses.push(course);
   res.send(course);
+})
+
+
+input validation ->
+app.post('/api/courses', (req, res) => {
+  (!req.body.name || req.body.name.length < 3) {
+    res.status(400).send('error');
+    return
+  }
 })
