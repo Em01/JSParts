@@ -1,0 +1,23 @@
+An express app is essentially made up of middleware functions.
+
+Express includes some middleware functions but you can also create custom ones.
+
+When a request is made to the server the request goes through a pipeline. This is called the request processing pipeline.
+
+In the request processing pipeline we have one or more middleware functions.
+
+Each middleware function either terminates the request/response cycle by returning a response object.
+Or it will pass control to another middleware function.
+
+Custom middleware functions are placed at the front of the request processing cycle.
+
+//custom middleware function (next refers to the next middleware in the request processing cycle):
+app.use(function(req, res, next) {
+  next() //passes control to the next middleware in the pipeline.
+})
+
+urlencoded() //for reading encoded payloads.
+static() for serving static files
+
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static('public')); -> served from the root e.g localhost:3000/readme.txt
