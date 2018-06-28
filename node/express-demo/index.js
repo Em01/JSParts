@@ -3,9 +3,13 @@ const config = require('config');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const Joi = require('joi');
+const logger = require('./logger');
+
 const express = require('express');
 const app = express();
-const logger = require('./logger');
+
+app.set('view engine', 'pug');
+app.set('views', './views'); //default and optional setting
 
 app.get('env');
 app.use(express.json());
@@ -29,8 +33,12 @@ const courses = [
 debug('connected to the database');
 
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.render('index', { title: 'My Express App', message: 'Hello'});
 });
+
+// app.get('/', (req, res) => {
+//   res.send('Hello World');
+// });
 
 app.get('/api/courses', (req, res) => {
   res.send(courses);
