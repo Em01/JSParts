@@ -1,5 +1,4 @@
-const startupDebugger = require('debug')('app:startup');
-const dbDebugger = require('debug')('app:db');
+const debug = require('debug')('app:startup');
 const config = require('config');
 const morgan = require('morgan');
 const helmet = require('helmet');
@@ -27,7 +26,7 @@ const courses = [
   {id: 3, name: 'course3'}
 ];
 
-dbDebugger('connected to the database');
+debug('connected to the database');
 
 app.get('/', (req, res) => {
   res.send('Hello World');
