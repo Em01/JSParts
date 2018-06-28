@@ -3,9 +3,4 @@ function log(req, res, next) {
   next()
 }
 
-// app.use(function(req, res, next) {
-//   console.log('Authenticating')
-//   next();
-// });
-
 module.exports = log;
