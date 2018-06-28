@@ -1,3 +1,4 @@
+const config = require('config');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const Joi = require('joi');
@@ -23,6 +24,7 @@ const courses = [
   {id: 2, name: 'course2'},
   {id: 3, name: 'course3'}
 ];
+
 
 app.get('/', (req, res) => {
   res.send('Hello World');
