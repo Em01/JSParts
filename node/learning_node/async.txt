@@ -1,0 +1,19 @@
+* Async = non blocking. Does not mean concurrent or multi threaded.
+
+patterns for dealing with async code:
+* Callbacks
+* Promises
+* Async/Await
+
+Callbacks: Function that we call when the result of a async operation is ready.
+
+getUser(1, (user) => {
+  console.log('User', user)
+})
+
+function getUser(id, callback) {
+  setTimeout(() => {
+    console.log("reading from db")
+    callback({id: id})
+  })
+}
