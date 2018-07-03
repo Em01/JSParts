@@ -5,3 +5,15 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/myapp')
   .then(() => console.log('connected to mongodb...'))
   .catch((err) => console.error('could not connect to mongodb', err));
+
+
+const course = new mongoose.Schema({
+  name: String,
+  author: String,
+  tags: [ String ],
+  data: {
+    type: Date,
+    default: Date.now
+  },
+  isPublished: Boolean
+})
