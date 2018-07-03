@@ -1,0 +1,2 @@
+Document or no sql database.
+There is no such thing as schema or design. You simply store the json object in mongodb.
