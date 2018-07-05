@@ -60,3 +60,8 @@ ends with: /Wi$/i     //the i signifies not case sensitive
 
 Contains:   .find({ author: /.*Mosh.*/i })
 .* means contains 0 or more characters before or after and we dont care what they are.
+
+
+* Count:
+number of documents that match our filter.
+.count()
