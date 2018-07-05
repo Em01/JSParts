@@ -69,3 +69,5 @@ number of documents that match our filter.
 
 * Skip:
 Implements Pagination
+
+mongoimport --db mongo-excercises --collection courses --file excercise-data.json --jsonArray
