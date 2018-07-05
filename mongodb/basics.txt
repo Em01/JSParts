@@ -51,3 +51,12 @@ nin: not in
 .find()
 .or([ { author: 'Mosh' }, { isPublished: true} ])
 .and([])
+
+regexp:
+^: string that starts with something
+/^Mosh/
+
+ends with: /Wi$/i     //the i signifies not case sensitive
+
+Contains:   .find({ author: /.*Mosh.*/i })
+.* means contains 0 or more characters before or after and we dont care what they are.
