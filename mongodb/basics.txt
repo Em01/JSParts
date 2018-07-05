@@ -41,3 +41,13 @@ nin: not in
 
 .find({ price: { $gte: 10, lte: 20 } })
 .find({ price: { $in: [10, 15, 20] } }) //specific values
+
+
+
+* Logical operators:
+// or
+// and
+
+.find()
+.or([ { author: 'Mosh' }, { isPublished: true} ])
+.and([])
