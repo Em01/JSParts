@@ -13,3 +13,17 @@ const Course = mongoose.model('Course', courseSchema) //class
 const course = new Course({
   name: 'Node.js Course'
 })
+
+retrieve documents:
+* .find: gets a list of documents
+* .findById: by id
+* .findOne: Returns a single document
+
+async function getCourses() {
+  const courses = await Course
+  .find({ author: 'Mosh', isPublished: true })
+  .limit(10)
+  .sort({ name: 1 }) //1 indicates ascending order, -1 is descending
+  .select({ name: 1, tags: 1})
+  console.log(courses)
+}
