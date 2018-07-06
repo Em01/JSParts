@@ -102,3 +102,37 @@ async function updateCourse(id) {
 }
 
 updateCourse("5b3e2977e7cb2808d987bd7f")
+
+
+//UPDATE First
+
+$currentDate
+$inc increments the value of a field by a specified amount
+$set: sets the value of a field in a document
+
+async function updateCourse(id) {
+  const result = await Course.update({ _id: id }, {
+    $set: {
+      author: 'Mosh',
+      isPublished: false
+    }
+  });
+  console.log(result);
+}
+
+updateCourse("5b3e2977e7cb2808d987bd7f")
+
+//To get the document that was updated findByIdAndUpdate. You need to pass an option to get the updated document.
+
+
+async function updateCourse(id) {
+  const course = await Course.findByIdAndUpdate({ _id: id }, {
+    $set: {
+      author: 'Em',
+      isPublished: true
+    }
+  }, { new: true });
+  console.log(course);
+}
+
+updateCourse("5b3e2977e7cb2808d987bd7f")
