@@ -71,3 +71,34 @@ number of documents that match our filter.
 Implements Pagination
 
 mongoimport --db mongo-excercises --collection courses --file excercise-data.json --jsonArray
+
+
+* Two ways to update a course in mongoDb:
+- query first:
+.findById()
+modify its properties
+then call the save method
+
+-the alternative approach is update first
+update directly
+optionally get the updated document as well.
+
+
+* Query First:
+//QueryFirst: use when you receive an input from the client and you want to make sure the update is a valid operation
+async function updateCourse(id) {
+  const course = await Course.findById(id);
+  if (!course) return;
+  course.isPublished = true
+  course.author = 'Anoter Author'
+
+  // course.set({
+  //   author: 'another author'
+  // })
+
+  const result = await course.save()
+  console.log(result)
+
+}
+
+updateCourse("5b3e2977e7cb2808d987bd7f")
