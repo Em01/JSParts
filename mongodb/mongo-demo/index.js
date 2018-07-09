@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost/myapp')
 
 
 const courseSchema = new mongoose.Schema({
-  name: String,
+  name: { type: String, required: true },
   author: String,
   tags: [ String ],
   data: {
@@ -26,10 +26,16 @@ async function createCourse() {
     name: 'Angular Course',
     author: 'Mosh',
     tags: ['node', 'frontend'],
-    isPublished: true
+    isPublished: true,
+    price: 15
   });
-  const result = await course.save();
-  console.log(result);
+
+  try {
+    const result = await course.save();
+    console.log(result);
+  } catch (ex) {
+    console.log(ex.message)
+  }
 }
 
 async function getCourses() {

@@ -1,0 +1,13 @@
+By default everything defined within a Schema is optional.
+
+const courseSchema = new mongoose.Schema({
+  name: { type: String, required: true }
+})
+
+
+can also manually call validate function. This returns a promise of void.
+await course.validate()
+course.validate((err) => {
+  if(err) {}
+})
+only meaningful in mongoose
