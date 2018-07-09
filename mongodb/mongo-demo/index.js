@@ -8,7 +8,8 @@ mongoose.connect('mongodb://localhost/myapp')
 
 
 const courseSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: true, minlength: 5, maxlength: 255 },
+  category: { type: String, enum: ['web', 'mobile', 'network']},
   author: String,
   tags: [ String ],
   data: {
@@ -24,12 +25,17 @@ const Course = mongoose.model('Course', courseSchema);
 async function createCourse() {
   const course = new Course({
     name: 'Angular Course',
+    category: '-',
     author: 'Mosh',
     tags: ['node', 'frontend'],
     isPublished: true,
-    price: 15
+    price: {
+      required: function() { return this.isPublished },
+      min: 10,
+      max: 200
+    }
   });
-
+//if is published then price is required
   try {
     const result = await course.save();
     console.log(result);

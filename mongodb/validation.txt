@@ -1,9 +1,17 @@
 By default everything defined within a Schema is optional.
 
 const courseSchema = new mongoose.Schema({
-  name: { type: String, required: true }
+  name: { type: String, required: true },
+  isPublished: Boolean,
+  price: {
+    type: Number,
+    required: function() { return this.isPublished }
+  }
 })
 
+Additional built in validators:
+String: min length, max length, match(regexp), enum(array of validators e.g category)
+Numbers: min & max
 
 can also manually call validate function. This returns a promise of void.
 await course.validate()
