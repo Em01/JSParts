@@ -19,3 +19,12 @@ course.validate((err) => {
   if(err) {}
 })
 only meaningful in mongoose
+
+Custom Validators:
+type: Array,
+validate: {
+  validator: function(v) {
+    return v.length > 0
+  },
+  message: 'A course should have at least one tag.'
+}
