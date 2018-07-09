@@ -28,3 +28,5 @@ validate: {
   },
   message: 'A course should have at least one tag.'
 }
+
+Async validators: For when you have to read from a remote http service or database.
