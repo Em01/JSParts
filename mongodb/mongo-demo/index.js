@@ -8,8 +8,21 @@ mongoose.connect('mongodb://localhost/myapp')
 
 
 const courseSchema = new mongoose.Schema({
-  name: { type: String, required: true, minlength: 5, maxlength: 255 },
-  category: { type: String, enum: ['web', 'mobile', 'network']},
+  name: {
+    type: String,
+    required: true,
+    minlength: 5,
+    maxlength: 255,
+    //match: /pattern/
+  },
+  category: {
+    type: String,
+    required: true,
+    enum: ['web', 'mobile', 'network'],
+    lowercase: true,
+    // uppercase: true,
+    trim: true //paddings around string removed
+  },
   author: String,
   tags: {
     type: Array,
@@ -20,17 +33,24 @@ const courseSchema = new mongoose.Schema({
           //filesystem etc async work
           const result = v && v.length > 0
           callback(result)
-        }, 4000)
-        return
+        }, 1000)
       },
       message: 'A course should have at least one tag.'
     }
   },
-  data: {
+  date: {
     type: Date,
     default: Date.now
   },
-  isPublished: Boolean
+  isPublished: Boolean,
+  price: {
+    type: Number,
+    required: function() { return this.isPublished },
+    min: 10,
+    max: 200,
+    get: v => Math.round(v),  //read
+    set: v => Math.round(v)   //set
+  }
 })
 
 const Course = mongoose.model('Course', courseSchema);
@@ -39,22 +59,19 @@ const Course = mongoose.model('Course', courseSchema);
 async function createCourse() {
   const course = new Course({
     name: 'Angular Course',
-    category: 'web',
+    category: 'Web',
     author: 'Mosh',
-    tags: ['node', 'frontend'],
+    tags: ['frontend'],
     isPublished: true,
-    price: {
-      required: function() { return this.isPublished },
-      min: 10,
-      max: 200
-    }
+    price: 15.8
   });
 //if is published then price is required
   try {
     const result = await course.save();
-    console.log(result);
+    console.log(result, 1);
   } catch (ex) {
-    console.log(ex.message)
+    for (field in ex.errors)
+      console.log(ex.errors[field].message, 2)
   }
 }
 
@@ -63,8 +80,11 @@ async function getCourses() {
   const pageSize = 10;
 
   const courses = await Course
-  .find({ author: 'Mosh', isPublished: true })
-  .skip((pageNumber -1) * pageSize)
+  .find({ _id: '5b45645d72013254f0d4fa6a'})
+
+  // .find({ author: 'Mosh', isPublished: true })
+  // .skip((pageNumber -1) * pageSize)
+
   // .find({ price: { $gte: 10, lte: 20 } })
   // .find({ price: { $in: [10, 15, 20] } })
   // .find()
@@ -79,14 +99,12 @@ async function getCourses() {
   // //Contains mosh
   //
   // .find({ author: /.*Mosh.*/i })
-  .limit(pageSize)
+  // .limit(pageSize)
   .sort({ name: 1 }) //1 indicates ascending order, -1 is descending
-  // .select({ name: 1, tags: 1})
-  .count()
-  console.log(courses)
+  .select({ name: 1, tags: 1, price: 1})
+  // .count()
+  console.log(courses[0].price)
 }
-
-getCourses();
 
 //QueryFirst
 // async function updateCourse(id) {
@@ -132,10 +150,11 @@ updateCourse("5b3e2977e7cb2808d987bd7f")
 // removeCourse("5b3e2977e7cb2808d987bd7f")
 
 
-async function removeCourse(id) {
-  // const result = await Course.deleteMany({ _id: id })
-  const course = await Course.findByIdAndRemove(id)
-  console.log(course)
-}
-
-removeCourse("5b3e2977e7cb2808d987bd7f")
+// async function removeCourse(id) {
+//   // const result = await Course.deleteMany({ _id: id })
+//   const course = await Course.findByIdAndRemove(id)
+//   console.log(course)
+// }
+//
+// removeCourse("5b3e2977e7cb2808d987bd7f")
+getCourses();
